@@ -10,9 +10,10 @@ import com.toedter.calendar.JDateChooser;
 public class BookFlight extends JFrame {
 
     // ✅ DB CONNECTION DETAILS (kept for compatibility with existing code)
+    // IMPORTANT: Replace these with your actual database credentials
     private static final String DB_URL = "jdbc:mysql://localhost:3306/airline_db";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "Spoorthi@2005";
+    private static final String DB_PASSWORD = "your_mysql_password"; // CHANGE THIS: replace with your MySQL password
 
     private JTextField aadharField, nameField, nationalityField, flightNameField, flightCodeField;
     private JTextArea addressArea;

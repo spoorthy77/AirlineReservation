@@ -61,6 +61,7 @@ package-lock.json
 .env
 .env.local
 .env.*.local
+*.env
 
 # Documentation (optional - remove if you want to keep these)
 CHATBOT_*.md

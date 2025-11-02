@@ -5,9 +5,11 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 
+    // Database credentials - Replace these with your actual values
+    // For security, consider using environment variables or a configuration file
     private static final String URL = "jdbc:mysql://localhost:3306/airline_db"; // your DB name
     private static final String USER = "root";  // replace if different
-    private static final String PASSWORD = "Spoorthi@2005";  // replace with your MySQL password
+    private static final String PASSWORD = "your_mysql_password";  // CHANGE THIS: replace with your MySQL password
 
     // ✅ This is the method all your other files (BookFlight, JourneyDetails, etc.) will use
     public static Connection getConnection() {
