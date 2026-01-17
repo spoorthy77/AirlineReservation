@@ -1,10 +1,29 @@
 package com.mycompany.airlinereservation;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.sql.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.UUID;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+
 import com.toedter.calendar.JDateChooser;
 
 public class BookFlight extends JFrame {
@@ -13,7 +32,7 @@ public class BookFlight extends JFrame {
     // IMPORTANT: Replace these with your actual database credentials
     private static final String DB_URL = "jdbc:mysql://localhost:3306/airline_db";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "your_mysql_password"; // CHANGE THIS: replace with your MySQL password
+    private static final String DB_PASSWORD = "Spoorthi@2005";
 
     private JTextField aadharField, nameField, nationalityField, flightNameField, flightCodeField;
     private JTextArea addressArea;
