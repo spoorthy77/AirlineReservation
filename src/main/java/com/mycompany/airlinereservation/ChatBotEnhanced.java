@@ -1,12 +1,20 @@
 package com.mycompany.airlinereservation;
 
-import java.io.*;
-import java.sql.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.json.JSONObject;
 
 /**
@@ -273,7 +281,7 @@ public class ChatBotEnhanced extends ChatBot {
     /**
      * Handle specific booking and query commands (original logic)
      */
-    private String handleSpecificCommands(String message) {
+    protected String handleSpecificCommands(String message) {
         String lowerMessage = message.toLowerCase().trim();
         
         if ((lowerMessage.contains("show") || lowerMessage.contains("list")) && 
@@ -836,7 +844,7 @@ public class ChatBotEnhanced extends ChatBot {
     /**
      * Local routing fallback
      */
-    private String routeLocally(String message) {
+    protected String routeLocally(String message) {
         String l = message == null ? "" : message.toLowerCase().trim();
         if (l.isEmpty()) return null;
         
@@ -849,7 +857,7 @@ public class ChatBotEnhanced extends ChatBot {
     /**
      * Get help message
      */
-    private String getHelpMessage() {
+    protected String getHelpMessage() {
         return "📚 ChatBot Help Menu (NLP-Enhanced):\n\n" +
                "✈️ FLIGHTS:\n" +
                "  • 'Show flights from [city] to [city]'\n" +
@@ -866,7 +874,7 @@ public class ChatBotEnhanced extends ChatBot {
     /**
      * Get fallback response
      */
-    private String getFallbackResponse(String userMessage) {
+    protected String getFallbackResponse(String userMessage) {
         return "👋 Hello! I'm your NLP-enhanced airline assistant.\n\n" +
                "I can help you with:\n" +
                "• Booking flights\n" +
